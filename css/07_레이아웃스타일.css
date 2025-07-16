@@ -1,0 +1,34 @@
+/*클래스 기반 CSS(스타일)*/
+
+.area1 {
+  background-color: red;
+}
+
+.area2 {
+  background-color: orange;
+}
+
+.area3 {
+  background-color: yellow;
+}
+
+.area4 {
+  background-color: green;
+}
+
+.area5 {
+  background-color: blue;
+}
+
+.block {
+  /*선 속성*/
+  border: 1px solid black;
+  width: 150px;
+  height: 150px;
+  color: white;
+  display: block; /*div 내에 이미 존재하는 css 중복*/
+}
+
+.inline {
+  display: inline;
+}

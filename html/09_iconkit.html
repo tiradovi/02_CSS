@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>아이콘 키트 이용하기</title>
+    <script
+      src="https://kit.fontawesome.com/2b1cc8e2c0.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <h1>폰트 어썸</h1>
+    <pre>
+        react와 같은 라이브러리, 프레임워크 (기능 모음)을 이용하면 
+        간편하게 사용할 수 있지만,
+        현재는 순수 html을 사용하고 있기 때문에
+        CDN이나 파일을 가져오는 형식을 사용해서
+        외부에서 만들어진 코드를 사용할 수 있음
+
+        <strong>1번 방법 CDN(Content Delivery Network)</strong> 
+        파일을 저장해서 불러오는 것이 아니라 웹 사이트에서 필요한 기능이나 속성을 가져오는 방법
+        <script src="https://kit.fontawesome.com/2b1cc8e2c0.js" crossorigin="anonymous"></script>
+        
+        장점 : 항상 최신 아이콘 사용 가능
+        주소만 작성하면 끝
+        개발자가 원하는 스타일이나 아이콘을 불러올 수 있음
+
+        단점 : 인터넷이 끊기면 작동X
+        외부 인터넷 사이트를 이용하기에 속도에 영향
+
+        <strong>2번 방법 Local File(개발자의 컴퓨터에 저장된 기능이나 속성을 가져오는 방법)</strong> 
+        
+        장점 : 인터넷이 끊겨도 작동O
+        상대적으로 속도가 빠를 수 있음
+
+        단점 : 수동으로 업데이트
+        설정이 복잡할 수 있음, 아이콘 종류나 기능에 제한이 있을 수 있음
+        <script src="09_iconkit.js"></script>
+    </pre>
+    <!-- 대개 아이콘을 가져올 때는 i 태그 이용 -->
+    <i class="fa-solid fa-house"></i>
+    <i class="fa-solid fa-arrow-up" style="color: #b197fc"></i>
+  </body>
+</html>

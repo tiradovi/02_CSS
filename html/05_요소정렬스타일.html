@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>요소 정렬 스타일(float/ clear)</title>
+    <link rel="stylesheet" href="../css/05_요소정렬스타일.css" />
+  </head>
+  <body>
+    <h1>요소 정렬 스타일(float/clear)</h1>
+    <pre>
+        float(뜨다, 띄우다, 뜨는 물건):
+        요소를 띄워서 좌/우로 정렬하는 속성
+        (float가 지정되지 않은 요소와 지정된 요소가 겹칠 수 있음)
+
+        clear : float으로 띄워진 상태 해제
+        (요소 겹침문제 해결)
+    </pre>
+    <hr />
+    <h3>float:left/clear:left</h3>
+    <div class="test">
+      <div class="float-left">1</div>
+      <div class="float-left">2</div>
+      <div class="float-left">3</div>
+      <div class="float-left">4</div>
+      <div>Hello</div>
+      <div class="clear-left">World</div>
+      <div class="float-left">5</div>
+      <div class="float-left">6</div>
+      <div class="float-left">7</div>
+    </div>
+
+    <h3>float:right/clear:right</h3>
+    <div class="test">
+      <div class="float-right">1</div>
+      <div class="float-right">2</div>
+      <div class="float-right">3</div>
+      <div class="float-right">4</div>
+      <div>Hello</div>
+      <div class="clear-right">World</div>
+      <div class="float-right">5</div>
+      <div class="clear-right">안녕하세요</div>
+      <div class="float-right">7</div>
+    </div>
+
+    <h3>float:left+right/clear:both</h3>
+    <div class="test">
+      <div class="float-left">1</div>
+      <div class="float-left">2</div>
+      <div class="float-right">3</div>
+      <div class="float-right">4</div>
+      <div>Hello</div>
+      <div class="clear-both">World</div>
+      <div class="float-left">5</div>
+    </div>
+  </body>
+</html>

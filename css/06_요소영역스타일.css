@@ -1,0 +1,97 @@
+/*
+        html 크기의 기본 요소는 기본적으로 content-box 기준으로 값 계산
+        width + padding + border 이 더해져서 실제 html 전체 크기가 결정
+
+        border-box로 변경한다는 것은 불필요한 여백 지우기
+        */
+* {
+  box-sizing: border-box;
+}
+.box {
+  width: 100px;
+  height: 100px;
+  background-color: lightsalmon;
+}
+.border {
+  border: 10px solid black;
+}
+.content {
+  width: 150px;
+  height: 150px;
+  /*기존 width/ height 설정 값이 content 영역에서만 content-box만의 계산값으로 적용되도록 설정*/
+  box-sizing: content-box;
+}
+/*padding content border 사이*/
+.padding {
+  width: 200px;
+  height: 200px;
+
+  /*상 우 하 좌의 순서  content, border 사이에 20px 띄움*/
+  padding: 20px;
+}
+.margin1 {
+  margin: 50px;
+}
+
+.margin2 {
+  margin: 100px;
+}
+/*css 폴더 내에 이미 box style이 존재하므로 작성없이도 기존 스타일 적용*/
+.box {
+  width: 100px;
+  height: 100px;
+  background-color: lightsalmon;
+}
+#test1 {
+  padding-top: 10px;
+  padding-bottom: 200px;
+  padding-left: 5px;
+  padding-right: 150px;
+
+  margin-top: 30px;
+  margin-bottom: 100px;
+  margin-left: 50px;
+  margin-right: 300px;
+  /*
+        border 선 
+        border     :  선의 굵기   선종류  선색상
+
+        선종류: 
+        solid : 실선
+        dotted: 점(.)선
+        double: 이중 실선
+        dashed: 점(-)선
+        */
+  border-top: 5px solid red;
+  border-bottom: 3px dotted black;
+  border-left: 10px double violet;
+  border-right: 3px dashed purple;
+}
+
+#test2 {
+  /**
+        border는 한 번에 상우하좌의 굵기를 통일해서 작성해야함
+        속성값을 나눠 작성하려면 다음과 같이 나눠야 한다
+        border-top: 5px 
+        border-bottom: 3px 
+        border-left: 10px 
+        border-right: 3px
+        즉
+        border : 2px 3px solid black  <-- 불가능
+        **/
+  border: 2px solid black;
+  /**모서리를 둥글게 만들 때 사용 (버튼이나 이미지에 보통 사용)**/
+  border-radius: 3px;
+}
+
+.container {
+  width: 500px;
+  height: 500px;
+  border: 3px solid black;
+  box-sizing: content-box; /*이름 내부에 들어가 있는 margin padding 적용*/
+}
+#test3 {
+  /*auto의 경우 좌우 가운데 정렬*/
+  margin: auto;
+  margin-top: 200px;
+}

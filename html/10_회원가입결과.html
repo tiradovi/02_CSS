@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>회원가입 결과</title>
+  <style>
+    body {
+      font-family: '맑은 고딕';
+      background-color: #e8f5e9;
+      margin: 0;
+    }
+
+    .result-container {
+      max-width: 500px;
+      margin: 80px auto;
+      background-color: white;
+      padding: 30px;
+      border-radius: 10px;
+      text-align: center;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+
+    h2 {
+      color: #2e7d32;
+    }
+
+    .info {
+      text-align: left;
+      margin-top: 20px;
+    }
+
+    .info p {
+      font-size: 18px;
+      margin: 10px 0;
+    }
+  </style>
+</head>
+<body>
+  <div class="result-container">
+    <h2>회원가입 완료 🎉</h2>
+    <div class="info">
+      <p><strong>이름:</strong> <span id="username">-</span></p>
+      <p><strong>이메일:</strong> <span id="useremail">-</span></p>
+      <p><strong>비밀번호:</strong> <span id="pw1">-</span></p>
+    </div>
+  </div>
+
+  <script>
+    const params = new URLSearchParams(window.location.search);
+    document.getElementById('username').textContent = params.get('username') || '(없음)';
+    document.getElementById('useremail').textContent = params.get('useremail') || '(없음)';
+    document.getElementById('pw1').textContent = params.get('pw1') || '(없음)';
+  </script>
+</body>
+</html>

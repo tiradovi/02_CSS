@@ -1,0 +1,70 @@
+.box {
+  background-color: #ffe0b2;
+  padding: 20px;
+  border: 5px solid #ff7043;
+  margin: 20px;
+  border-radius: 10px;
+  text-align: center;
+}
+.title {
+  background-color: #ff7043;
+  color: white;
+  font-size: 28px;
+  padding: 20px;
+  margin: 0px;
+}
+.nav {
+  margin: 10px auto;
+}
+/*.nav 클래스 내부에 존재하는 a 태그만 적용*/
+.nav a {
+  margin: 0 15px;
+  text-decoration: none;
+  font-weight: bold;
+  color: #d84315;
+}
+body {
+  margin: 0;
+}
+.pizza-item {
+  width: 250px;
+  background-color: white;
+  padding: 15px;
+
+  border-radius: 10px;
+}
+img {
+  width: 200px;
+  height: 200px;
+}
+.pizza-list {
+  /* 
+        피자리스트 div 내부에 
+        피자아이템 여러가지가 있음
+        정렬을 위해 바깥에 list에 display: flex하는 방법 1
+        */
+  display: flex;
+  justify-content: center; /*가운데 정렬*/
+}
+.pizza-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: pink;
+  padding: 10px;
+  border: 2px solid black;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 5;
+}
+.footer {
+  background-color: #ffccbc;
+  text-align: center;
+  padding: 15px;
+  font-size: 14px;
+
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}

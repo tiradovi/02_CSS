@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS 개요, CSS 선택자</title>
+    <style>
+      /* css 범위 주석*/
+      /* style 태그 : css를 작성하기 위한 태그*/
+      /* 태그 선택자*/
+      h1 {
+        color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>CSS(Cascading Style Sheets)</h1>
+    <pre>
+        마크업 언어(HTML)가 실제로 화면에 표시되는 방법을 기술하는 언어
+        (모양, 색상, 크기, 배경이미지, 움직임,..)
+
+        하나의 요소에 여러 CSS 코드를 겹쳐서 원하는 스타일을 만들어냄
+
+        W3C에서 CSS를 웹 표준으로 지정
+    </pre>
+    <hr />
+    <hr />
+
+    <h1 id="test">CSS 선택자(CSS Selector)</h1>
+    <pre>
+        현재 문서 내에서 특정 요소를 선택하는 문자 또는 문자열(기호)
+
+        * 요소(Element) : 시작태그 + 속성 + 내용 + 종료태그
+    </pre>
+    <!-- h6같은 경우 안에 제목이 들어가면 요소    <h6>제목</h6> -->
+    <!-- input의 경우 클라이언트가 작성하는 요소 <input type="text" />-->
+    <ul>
+      *css 코드 작성법*
+      <li>head 태그에 style 태그 작성 후 내부에 css 코드 작성</li>
+      <li>원하는 요소에 style 속성을 이용해 css 코드 작성</li>
+      <li>
+        외부 .css 파일을 생성해서 연결하는 방법<small>(현업에서 사용)</small>
+      </li>
+    </ul>
+    <!-- 
+    head 태그 내부에 style 태그 작성이 개발자간 규칙
+    css 익히기 위해서 body에 사용
+    -->
+    <style>
+      strong {
+        font-size: 20px; /*폰트 크기 조절 보통 p 태그 기준 16px가 기본값*/
+        font-family: "궁서체"; /*글자색*/
+        color: steelblue;
+      }
+      code {
+        background-color: lightcoral; /*배경색*/
+        display: block; /*인라인 형식변경*/
+        font-weight: bold; /*글자 굵기 변경*/
+      }
+    </style>
+    <h3>태그 선택자</h3>
+    <pre>
+        현재 문서 내에 특정 태그를 모두 찾아 선택하는 선택자
+
+        <strong>작성법</strong>
+        <code>
+            태그명{css 코드;}
+        </code>
+    </pre>
+    <hr />
+    <h3>id(#) 선택자</h3>
+    <pre>
+        HTML 문서 내에서
+        id가 일치하는 요소를 선택하는 선택자
+    </pre>
+    <strong>작성법</strong>
+    <code> #id속성값{css 코드;} </code>
+    <style>
+      /*
+        id(#) 선택자 
+        HTML 문서 내에서 id가 중복되는 경우가 없게 해야한다.
+        id는 CSS가 아닌 JS기능과 연관
+        보통은 class 내부에 클래스 명칭을 작성하고 명칭을 이용해서 CSS작성
+        class 보다 우선순위로 급할 때만 id로 CSS사용
+        */
+      #li1 {
+        background-color: green;
+      }
+      #li2 {
+        background-color: yellow;
+      }
+      #li3 {
+        background-color: orange;
+      }
+    </style>
+    <ol>
+      <li id="li1">id 선택자 테스트1</li>
+      <li id="li2">id 선택자 테스트2</li>
+      <li id="li3">id 선택자 테스트3</li>
+    </ol>
+    <hr />
+    <h3>class(.)선택자</h3>
+    <pre>
+        HTML 문서 내에서 class 속성 값이 일치하는 모든 요소를 선택하는 선택자
+    <strong>작성법</strong>
+    <code>
+        .class속성값{css 코드;}
+    </code>
+
+    * id 보다 class 선택자 이용 권장
+    (id가 CSS보다 JS에서 많이 사용되기 때문)
+    </pre>
+    <style>
+      /*class(.) 선택자*/
+      .test1 {
+        background-color: black;
+        color: white;
+      }
+      .test999 {
+        background-color: pink;
+      }
+    </style>
+    <p class="test1">class 선택자 테스트</p>
+    <p class="test999">class 선택자 테스트</p>
+    <p class="test1">class 선택자 테스트</p>
+    <p class="test999">class 선택자 테스트</p>
+    <p class="test1">class 선택자 테스트</p>
+    <p class="test999">class 선택자 테스트</p>
+    <!-- test-1 스타일 배경색상 orange, test-2 글자크기 30px-->
+    <style>
+      .test-1 {
+        background-color: orange;
+      }
+      .test-2 {
+        color: green;
+        font-size: 30px;
+        background-color: gold;
+      }
+      .aaa {
+        background-color: skyblue;
+      }
+    </style>
+    <ul>
+      <li class="test-1">클래스 선택자 테스트1</li>
+      <li class="test-2">클래스 선택자 테스트2</li>
+      <li class="test-1">클래스 선택자 테스트3</li>
+      <li class="test-2">클래스 선택자 테스트4</li>
+      <li class="test-1">클래스 선택자 테스트5</li>
+
+      <li class="aaa">클래스 선택자 테스트6</li>
+
+      <!-- 
+      클래스에서 여러 스타일 적용법 
+      적용 순서는 중복이 된다면 스타일 내에서 가장 마지막으로 작성한 순서가 우선적으로 적용
+      Class 내부에서 속성 값 순서는 의미가 없음 
+      -->
+      <li class="aaa test-1">클래스 선택자 테스트7</li>
+      <li class="test-2 aaa">클래스 선택자 테스트8</li>
+    </ul>
+    <hr />
+    <h3>모든 요소 선택자(*, asterRisk)</h3>
+    <style>
+      /*모든 요소 선택자(*)*/
+      * {
+        text-decoration: underline;
+        font-family: "굴림";
+      }
+    </style>
+    <pre>
+        단독 사용 시 : 문서에 존재하는 모든 요소 선택자
+        다른 선택자와 혼용 사용시 : 선택된 요소의 모든 자식/후손/형제까지 모두 적용
+
+        CSS 적용 우선 순위 
+        1. 선택자 범위가 가장 작은 선택자가 우선
+        (!important > 인라인 스타일 > 아이디 > 클래스 > 태그 > 모든 요소)
+        2. 태그 내에서 같은 속성값이 있을 경우 가장 마지막에 작성된 클래스 내에 존재하는 CSS 속성값이 적용
+    </pre>
+  </body>
+</html>

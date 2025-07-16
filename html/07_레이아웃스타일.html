@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>레이아웃 스타일 1탄</title>
+    <link rel="stylesheet" href="../css/07_레이아웃스타일.css" />
+  </head>
+  <body>
+    <h1>레이아웃(layout)</h1>
+    <pre>
+        사전적 의미 : 배치 정리
+        기술적 의미 : 구성 요소를 제한된 공간에 효율적으로 배치하는 것
+    </pre>
+
+    <hr />
+    <h1>화면 배치(표시, 영역) 지정: display 속성</h1>
+    <pre>
+        요소가 화면에 어떻게 보여질지 형식을 지정하는 속성
+
+        - block : 화면 한 줄 다 차지하는 수직 분할
+                + width, height 지정 가능
+
+        - inline : 화면에서 필요한 만큼 행을 가짐 글자나 문자열 작동 수평 분할
+                + width, height 지정 불가
+
+        - inline-block : inline과 block 의 장점 활용
+                        inline 처럼 필요한만큼 행을 지님 width, height 지정가능
+                        + img iframe 처럼 다른 요소도 사용 가능
+
+        - none : 요소는 존재하나 화면에는 보이지 않게 함 (투명 태그)
+
+        - flex : 요소의 정렬되는 방향, 요소간의 간격을 유연하게 처리하는 방식
+
+        - grid : 격자무니 형식으로 화면을 쉽게 분할하는 형식
+    </pre>
+    <hr />
+    <h3>block 형식의 요소를 inline 형식으로 변경</h3>
+    <div class="block area1 inline">1번 영역</div>
+    <div class="block area2 inline">2번 영역</div>
+    <div class="block area3 inline">3번 영역</div>
+    <div class="block area4 inline">4번 영역</div>
+    <div class="block area5 inline">5번 영역</div>
+
+    <h3>inline 형식의 요소를 block 형식으로 변경</h3>
+    <span class="area1 block">1번 영역</span>
+    <span class="area2 block">2번 영역</span>
+    <span class="area3 block">3번 영역</span>
+    <span class="area4 block">4번 영역</span>
+    <span class="area5 block">5번 영역</span>
+  </body>
+</html>
