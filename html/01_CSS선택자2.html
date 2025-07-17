@@ -81,8 +81,42 @@
       <p>parent2의 후손 요소입니다.</p>
 
       <div>
-      <p>parent2의 후손 요소입니다.</p>  
+        <p>parent2의 후손 요소입니다.</p>
       </div>
     </div>
+    <hr />
+    <h1>반응 선택자</h1>
+    <pre>
+        사용자의 움직임에 반응하여 스타일이 변경되게하는 선택자1
+        
+        선택자:active -> 선택된 요소가 클릭 되고 있을 때
+        선택자:hover -> 선택된 요소 위에 마우스가 올라갔을 때
+    </pre>
+
+    <!--카멜표기법-->
+    <div class="test-div" id="activeBox">:active</div>
+    <div class="test-div" id="hoverBox">:hover</div>
+    <hr />
+    <h1>상태 선택자</h1>
+    <pre>
+        입력 양식(input, input관련 태그)의 상태에 따라 선택되는 선택자
+        
+        :focus -> 요소에 초점이 맞춰졌을때(input요소를 클릭해서 입력준비가 된 상태)
+        :checked-> 요소가 체크되었을 때(radio, checkbox)
+        :enabled / :disabled -> 요소가 활성 / 비활성화 되었을 때
+    </pre>
+
+    <h5>:focus</h5>
+    아이디 입력<input type="text" id="input1" />
+
+    <h5>:checked</h5>
+    <input type="checkbox" id="input2" />
+
+    <h5>enabled/ disabled</h5>
+    <input type="text" class="input3" />
+    <!-- 기본값 enabled -->
+    <input type="text" class="input3" enabled />
+    <br />
+    <input type="text" class="input3" disabled />
   </body>
 </html>

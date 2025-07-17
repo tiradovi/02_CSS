@@ -55,3 +55,70 @@ p[data="data-2"] {
 #parent1 > li > span {
   color: red;
 }
+
+/* 후손 선택자()*/
+/* id 가 parent2인 요소의 후손 중 모든 p태그 선택*/
+#parent2 p {
+  background-color: lightcoral;
+}
+#parent2 > div > p {
+  color: blue;
+}
+/*반응 선택자*/
+.test-div {
+  border: 3px solid black;
+
+  width: 200px;
+  height: 200px;
+  /*배경색 #ddd*/
+  background-color: #ddd;
+  /* 아랫쪽 요소와 30px 만큼 간격 추가*/
+  margin-bottom: 30px;
+  /*마우스 커서를 손가락 모양으로 변경*/
+  cursor: pointer;
+}
+
+#activeBox:active {
+  background-color: yellow;
+}
+#hoverBox:hover {
+  /*배경이미지*/
+  background-image: url("../images/pizza/새우.png");
+  /*배경이미지 크기  background-size: cover 요소크기에 맞춰서 이미지 크기 설정*/
+  background-size: cover;
+}
+/*상태 선택자*/
+#input1:focus {
+  /*초점이 맞춰졌을 때 요소 바깥에 생기는 선*/
+  outline-color: greenyellow;
+}
+
+#input1 {
+  /*
+    선색상만 변경 굵기나 종류 생략
+     outline-color: 바깥선
+     border-color: 내부선 색상
+     
+    */
+  border-color: red;
+}
+
+/*:checked*/
+#input2:checked {
+  width: 30px;
+  height: 30px;
+  background-color: red;
+  /*
+  radio, checkbox 선택은 색상이 아닌 이미지
+  따라서 배경색 적용X
+  즉 크기만 커짐
+  background-color: red;->적용 X
+  */
+}
+.input3:enabled {
+  background-color: skyblue;
+}
+
+.input3:disabled {
+  background-color: lightcoral;
+}
