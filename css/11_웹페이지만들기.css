@@ -13,8 +13,22 @@
   font-size: 24px;
 }
 
+.header-left .logo img {
+  width: 100px;
+  border-radius: 50%;
+ 
+}
 .header-right a {
   text-decoration: none;
   font-size: 20px;
   color: #555;
 }
+.nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+}
+/*
+
+*/
