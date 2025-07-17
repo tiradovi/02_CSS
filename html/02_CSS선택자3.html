@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS 선택자 3탄</title>
+    <link rel="stylesheet" href="../css/02_CSS선택자3.css" />
+  </head>
+  <body>
+    <h1>일반 구조(위치) 선택자</h1>
+    <pre>
+        형제 관계에 있는 요소중에서 특정 요소만을 선택하는 선택자
+
+        *중요* -> 위치를 기준으로 구분함
+
+        (A: 선택된 요소)
+        A:first-child                   -> 형제들 중 첫 번째가 A가 맞다면 선택
+        
+        A:last-child                    -> 형제들 중 마지막이 A가 맞다면 선택
+
+        A:nth-child(숫자 또는 수열)      -> 형제들 중 n 번째가 A가 맞다면 선택
+        
+        A:nth-last-child(숫자 또는 수열) -> 형제들 중 뒤에서부터 n 번째가 A가 맞다면 선택 
+    </pre>
+    <div id="test1">
+      <p>테스트1</p>
+      <p>테스트2</p>
+      <p>테스트3</p>
+      <p>테스트4</p>
+      <p>테스트5</p>
+      <p>테스트6(pre)</p>
+    </div>
+    <hr />
+    <hr />
+    <table border="1">
+      <tr>
+        <td>1번째 줄</td>
+      </tr>
+      <tr>
+        <td>2번째 줄</td>
+      </tr>
+      <tr>
+        <td>3번째 줄</td>
+      </tr>
+      <tr>
+        <td>4번째 줄</td>
+      </tr>
+      <tr>
+        <td>5번째 줄</td>
+      </tr>
+    </table>
+  </body>
+</html>

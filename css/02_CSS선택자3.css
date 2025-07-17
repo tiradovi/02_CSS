@@ -1,0 +1,67 @@
+/* 일반 구조 선택자 */
+/*
+구조 선택자를 작성할 때 
+p:first-child 이 형태로만 작성해도 가능
+p태그 내에서 첫 번째 자식 선택
+그런데 위와 같이 사용 할 경우 div id="test1" 내에 있는 p태그만 적용되는 것이 아닌 
+02_CSS선택자3.html 모든 태그 내에 있는 p태그에 적용되기 때문에 아래와 같이 작성
+#test1 > p:first-child 
+*/
+
+/*
+A:first-child  형제들 중 첫 번째가 A가 맞다면 선택
+*/
+#test1 > p:first-child {
+  background-color: red;
+  color: white;
+}
+
+/*
+A:last-child  형제들 중 마지막이 A가 맞다면 선택
+*/
+#test1 > p:last-child {
+  background-color: blue;
+  color: white;
+}
+
+/*
+A:nth-child  형제들 중 n 번째가 A가 맞다면 선택
+*/
+#test1 > p:nth-child(3) {
+  background-color: yellow;
+}
+
+/*
+A:nth-last-child  형제들 중 마지막에서 n 번째가 A가 맞다면 선택
+*/
+#test1 > p:nth-last-child(4) {
+  border: 5px dotted black;
+}
+
+/*
+홀수 번째가 p태그 선택
+*/
+#test1 > p:nth-child(2n-1) {
+  text-decoration: line-through;
+}
+/*
+짝수 번째가 p태그 선택
+*/
+#test1 > p:nth-child(2n) {
+  text-decoration: underline;
+}
+
+/*
+table > tr:nth-child(odd)  작동 안함 
+table 내에 있는 tr과 td는 table의 자식이 아닌 태그 도구
+
+odd: 홀수
+even: 짝수
+*/
+tr:nth-child(odd) {
+  background-color: lightblue;
+}
+
+tr:nth-child(even) {
+  background-color: lightpink;
+}
