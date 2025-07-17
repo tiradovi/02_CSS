@@ -1,0 +1,57 @@
+h1 {
+  color: red;
+}
+
+code {
+  background-color: pink;
+  font-weight: bold;
+  display: block; /*code 태그는 한줄차지*/
+}
+/*기본 속성 선택자*/
+
+/*div 태그 중 name 속성 값이 "name-1"인 요소에 배경색 green*/
+div[name="name-1"] {
+  background-color: green;
+}
+div[name="name-2"] {
+  background-color: yellow;
+}
+/*모든 div 요소 글자색 gray로 변경*/
+div {
+  color: gray;
+}
+/*p 태그 중 data 속성의 값이 "data-1"인 요소만 배경색red*/
+p[data="data-1"] {
+  background-color: red;
+}
+
+/*내용이 p3, p4인 요소를 선택해서 배경색blue*/
+p[data="data-2"] {
+  background-color: blue;
+}
+
+/*모든 요소(*)중에서 name 속성값이 "name-1"인 요소 글자 크기 30px*/
+/*
+*[name="name-1"] {
+  font-size: 30px;
+}
+*/
+/*모든 요소를 선택할 때 태그 명칭 생략*/
+[name="name-1"] {
+  /* *[name="name-1"] { font-size: 30px;} 같은 의미*/
+  font-size: 30px;
+}
+
+/* 자식 선택자(>) */
+
+#parent1 {
+  background-color: skyblue;
+}
+#parent1 > li {
+  background-color: gold;
+}
+/*!! 선택자를 연이어 작성할 수 있다. */
+/* 자식2 ,자식4 의 글자색을 red로 설정*/
+#parent1 > li > span {
+  color: red;
+}
