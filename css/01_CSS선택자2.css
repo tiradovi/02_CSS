@@ -122,3 +122,92 @@ p[data="data-2"] {
 .input3:disabled {
   background-color: lightcoral;
 }
+
+/*동위 선택자*/
+/* + : 바로 뒤 형제 요소 하나 */
+#div1 + div {
+  background-color: yellow;
+}
+/* ~ : 뒤에 존재하는 형제 요소 중 일치하는 요소 모두 선택*/
+#div3 ~ div {
+  /*p 태그 제외 div 배경색 설정*/
+  background-color: springgreen;
+}
+
+/* 체크박스 만들기 */
+
+/*1.label 요소를 체크박스 모양으로 만들기
++ : 다음 뒤에 위치한 태그 요소를 선택하는 선택자
+즉 #check 뒤의 label 하나 선택
+*/
+#check + label {
+  width: 30px;
+  height: 30px;
+  border: 1px solid black;
+
+  /*크기지정 O, 한줄에 배치할 수 있도록 수평 분할*/
+  display: inline-block;
+  cursor: pointer; /*포인터 모양 변경*/
+  border-radius: 20%;
+
+  user-select: none; /*사용자의 선택 금지*/
+}
+/*
+2. 체크박스가 체크 되었을 때 label에 체크박스 이미지 표시
+#check:checked + label {
+  background-image: url(../images/checkbox.png);
+  background-size: cover;
+}
+  체크 없이도 보이도록 설정
+#check:checked + label {
+  background-image: url(../images/checkbox.png);
+  background-size: cover;
+}
+*/
+#check:checked + label {
+  background-image: url(../images/checkbox.png);
+  background-size: cover;
+}
+
+/*체크박스 존재하나 보이지 않게 처리*/
+#check {
+  display: none;
+}
+
+/* 파일 버튼 만들기 1탄*/
+
+/*1. 파일 선택 버튼을 업로드한 이미지로 변경*/
+#imgFile-1 + label {
+  width: 30px;
+  height: 30px;
+  border: 1px solid black;
+  /*
+    라벨의 경우 label 태그 내부에 텍스트를 작성하거나 이미지가 있어야 보인다.
+    display: inline-block 사용하면 그런거 없이도 보임
+    */
+  display: inline-block;
+  border-radius: 20%;
+  cursor: pointer;
+  background-image: url("../images/upload.png");
+  background-size: cover;
+  user-select: none;
+}
+/*2. 파일 선택 input 숨기기*/
+#imgFile-1 {
+  display: none;
+}
+
+/* 파일 버튼 만들기 1탄*/
+/*1. 파일 선택 input 숨기기*/
+#imgFile-2 {
+  display: none;
+}
+/*2. imgFile-2 다음에 오는 img 크기 조정*/
+#imgFile-2 + label > img {
+  width: 100px;
+  height: 100px;
+  border-radius: 20%;
+  border: 1px solid black;
+  display: inline-block;
+  cursor: pointer;
+}

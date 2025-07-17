@@ -118,5 +118,75 @@
     <input type="text" class="input3" enabled />
     <br />
     <input type="text" class="input3" disabled />
+    <hr />
+    <h1>동위 선택자</h1>
+    <pre>
+    동위(동등한 위치 == 형제 관계) 관계에서
+    다음(뒤)에 위치한 요소를 선택하는 선택자
+
+    A
+    B  +
+    B
+    
+    1) A 바로 다음에 위치한 B 요소 하나 선택(+)
+    <code>
+        A선택자 + B선택자{css코드}
+    </code>
+
+    2) A 바로 다음에 위치한 B 요소 모두 선택(~, Tilde(틸드))
+    <code>
+        A선택자 ~ B선택자{CSS 코드}
+    </code>
+    
+    <div id="div1">1번 입니다.</div>
+    <div>2번 입니다.</div>
+    <div id="div3">3번 입니다.</div>
+    <div id="div4">4번 입니다.</div>
+
+    <p>관련 없는 태그입니다.</p>
+
+    <div id="div5">5번 입니다.</div>
+</pre>
+    <hr />
+    <hr />
+    <hr />
+    <hr />
+    <hr />
+
+    <h1>체크박스 만들기</h1>
+    <pre>
+        [준비물]
+        1. 동위 선택자(+)
+        2. 상태 선택자(:checked)
+        3. input type="checkbox"
+        4. label 태그 for 속성
+        5. 체크박스 이미지
+
+    </pre>
+    <!-- 
+    label과 input을 연결할 때 for 와 id를 사용 
+    for의 명칭과 id의 명칭이 일치해야 한다. 
+    -->
+    <input type="checkbox" id="check" />
+    <label for="check"></label>
+
+    <hr />
+    <hr />
+    <hr />
+    <hr />
+    <hr />
+
+    <h1>파일 업로드 버튼 만들기 1탄</h1>
+
+    <input type="file" id="imgFile-1" />
+    <label for="imgFile-1">클릭</label>
+
+    <h1>파일 업로드 버튼 만들기 2탄</h1>
+
+    <input type="file" id="imgFile-2" />
+    <label for="imgFile-2">
+      <img src="../images/upload.png" />
+      클릭해서 이미지를 업로드 하세요
+    </label>
   </body>
 </html>
