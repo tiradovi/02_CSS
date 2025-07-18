@@ -1,0 +1,31 @@
+body {
+  line-height: 1.6;
+  margin: 0;
+  padding: 20px;
+  background-color: #f5f5f5;
+}
+.container {
+  /*
+  기본 가로너비 크기는 최대 1200px로 고정
+  여백 상하 = 0 좌우 = 자동 여백 제공
+  배경색 = 흰색
+  패딩= 상우하좌 = 30px
+  모서리 상우하좌 = 10px 둥글게
+  태그 그림자 오른쪽 이동없음 아래로 2px 번지기 정도 10px 색상 거의 투명 검정 
+  */
+  max-width: 1200px;
+  margin: 0 auto;
+  background-color: white;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/*768 태블릿 가로 크기로 기기 화면 너비가 줄어들었을 경우 */
+@media (max-width: 768px) {
+  .container {
+    padding: 20px;
+    margin: 10px;
+    box-shadow: 0 2px 10px rgba(255, 0, 0, 0.4);
+  }
+}

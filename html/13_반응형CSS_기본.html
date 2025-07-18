@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>기본 반응형 CSS 개요</title>
+    <link rel="stylesheet" href="../css/13_반응형CSS_기본.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>기본 반응형 CSS</h1>
+      <h2>1. 미디어 쿼리란?</h2>
+      <p>
+        미디어 퀴리(Media Query)는 CSS3에서 도입된 기능으로, 기기의 화면 크기,
+        해상도, 방향 등에 따라 다른 스타일을 적용할 수 있게 해주는 CSS 기법
+      </p>
+      <div class="code-block">
+        <pre>
+            @media(조건) {
+                /* 조건이 맞을 때 적용할 CSS 스타일 */
+            }
+        </pre>
+      </div>
+      <h2>2. 기본문법</h2>
+      <h3>2. 1 최대 너비 조건</h3>
+      <div class="code-block">
+        <pre>
+            @media(max-width : 768px){
+                /* 화면 너비가 768px 이하일 때 적용 */
+                .container {
+                    width: 100%; → 기기 너비(가로)의 
+                    크기가 768px 이하이면 기기의 크기에 맞춰서 div 태그들의 요소 크기를 조정하겠다.
+                    padding 10px;
+                }
+            }
+        </pre>
+      </div>
+      <h3>2. 2 최소 너비 조건</h3>
+      <div class="code-block">
+        <pre>
+            @media(min-width:769px){
+                /*화면 너비가 769px 이상일 때 적용*/
+                .container{
+                    width: 1200px
+                    margin:auto
+                }
+            }
+        </pre>
+      </div>
+      <h3>2. 3 범위 조건</h3>
+      <div class="code-block">
+        <pre>
+            @media(min-width: 768px)and (max-width: 1024px){
+                /*화면 너비가 768px ~ 1024px 사이일 때 적용*/
+            }
+        </pre>
+      </div>
+    </div>
+  </body>
+</html>
