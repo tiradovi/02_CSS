@@ -16,45 +16,93 @@
       </p>
       <div class="code-block">
         <pre>
-            @media(조건) {
-                /* 조건이 맞을 때 적용할 CSS 스타일 */
-            }
+@media(조건) {
+    /* 조건이 맞을 때 적용할 CSS 스타일 */
+}
         </pre>
       </div>
       <h2>2. 기본문법</h2>
       <h3>2. 1 최대 너비 조건</h3>
       <div class="code-block">
         <pre>
-            @media(max-width : 768px){
-                /* 화면 너비가 768px 이하일 때 적용 */
-                .container {
-                    width: 100%; → 기기 너비(가로)의 
-                    크기가 768px 이하이면 기기의 크기에 맞춰서 div 태그들의 요소 크기를 조정하겠다.
-                    padding 10px;
-                }
-            }
+@media(max-width : 768px){
+    /* 화면 너비가 768px 이하일 때 적용 */
+    .container {
+        width: 100%; → 기기 너비(가로)의 
+        크기가 768px 이하이면 기기의 크기에 
+        맞춰서 div 태그들의 요소 크기를 조정하겠다.
+        padding 10px;
+    }
+}
         </pre>
       </div>
       <h3>2. 2 최소 너비 조건</h3>
       <div class="code-block">
         <pre>
-            @media(min-width:769px){
-                /*화면 너비가 769px 이상일 때 적용*/
-                .container{
-                    width: 1200px
-                    margin:auto
-                }
-            }
+@media(min-width:769px){
+    /*화면 너비가 769px 이상일 때 적용*/
+    .container{
+        width: 1200px;
+        margin:auto; 
+    }
+}
         </pre>
       </div>
       <h3>2. 3 범위 조건</h3>
       <div class="code-block">
         <pre>
-            @media(min-width: 768px)and (max-width: 1024px){
-                /*화면 너비가 768px ~ 1024px 사이일 때 적용*/
-            }
+@media(min-width: 768px)and (max-width: 1024px){
+    /*화면 너비가 768px ~ 1024px 사이일 때 적용*/
+    .container{
+        width: 90%;
+    }
+}
         </pre>
       </div>
+      <h2>3. 주요 브레이크 포인트</h2>
+      <!--  table.breakpoint-table>thead>tr>th*3^^tbody>tr*5>td*3 -->
+      <table class="breakpoint-table">
+        <thead>
+          <tr>
+            <th>기기 유형</th>
+            <th>화면 크기</th>
+            <th>미디어 쿼리 예시</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>모바일 (세로)</td>
+            <td>0~480px</td>
+            <td>@media(max-width:480px)</td>
+          </tr>
+          <tr>
+            <td>모바일 (가로)</td>
+            <td>481px~768px</td>
+            <td>@media(max-width:768px)</td>
+          </tr>
+          <tr>
+            <td>태블릿</td>
+            <td>769px~1024px</td>
+            <td>@media(max-width:1024px)</td>
+          </tr>
+          <tr>
+            <td>데스크톱</td>
+            <td>1025px~1200px</td>
+            <td>@media(max-width:1200px)</td>
+          </tr>
+          <tr>
+            <td>대형화면</td>
+            <td>1201px~</td>
+            <td>@media(min-width:1201px)</td>
+          </tr>
+        </tbody>
+      </table>
+      <h2>4. 실제 예시</h2>
+      <div class="hightlight">
+        <strong> 💡팁: </strong> 현재 화면 크기를 변경해보세요! 아래박스의
+        색상과 텍스트가 변경됩니다.
+      </div>
+      <div class="반응형-박스">반응형 데모 박스(데스크톱 화면)</div>
     </div>
   </body>
 </html>

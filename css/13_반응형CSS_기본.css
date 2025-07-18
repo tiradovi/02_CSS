@@ -21,11 +21,83 @@ body {
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
-/*768 태블릿 가로 크기로 기기 화면 너비가 줄어들었을 경우 */
+.code-block {
+  background-color: #f8f8f8;
+  border: 1px solid #dee2e6;
+  padding: 15px;
+  margin: 15px 0;
+}
+.code-block pre {
+  margin: 0;
+  font-size: 14px;
+}
+.hightlight {
+  background-color: #fff3cd;
+  padding: 15px;
+  border-left: 4px solid #ffc107;
+  margin: 15px 0;
+}
+
+.반응형-박스 {
+  background-color: #28a745;
+  color: white;
+  padding: 20px;
+  margin: 10px;
+  border-radius: 5px;
+  text-align: center;
+}
+.breakpoint-table {
+  width: 100%;
+  margin: 20px 0;
+}
+/*
+동일한 스타일을 다른 태그에 동시에 적용할 때 사용하는 방법
+속성 안에 작성한 스타일을 
+.breakpoint-table 클래스내에 th 태그와
+.breakpoint-table 클래스내에 td 태그에 동시에 적용할 때
+,를 사용
+
+*/
+.breakpoint-table th,
+.breakpoint-table td {
+  border: 1px solid #dee2e6;
+  padding: 12px;
+  text-align: left;
+}
+
+.breakpoint-table th {
+  background-color: #007bff;
+  color: white;
+}
+
+.breakpoint-table tr:nth-child(even) {
+  background-color: #f8f9fa;
+}
+
+/*768 이하로 가로 크기가 줄어들었을 경우 */
 @media (max-width: 768px) {
   .container {
     padding: 20px;
     margin: 10px;
     box-shadow: 0 2px 10px rgba(255, 0, 0, 0.4);
+  }
+  .반응형-박스 {
+    background-color: #dc3545;
+  }
+}
+/*480 모바일 세로 크기로 기기 화면 너비가 줄어들었을 경우 */
+@media (max-width: 480px) {
+  .container {
+    padding: 15px;
+    margin: 5px;
+  }
+  .container h1 {
+    font-size: 20px;
+  }
+  .container h2 {
+    font-size: 18px;
+  }
+  .반응형-박스 {
+    background-color: #6f42c1;
   }
 }
