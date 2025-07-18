@@ -1,3 +1,5 @@
+/**************공통 CSS *************/
+
 body {
   margin: 20px 0 0 0;
   background-color: #f9f9f9;
@@ -48,7 +50,7 @@ p {
 .nav a:hover {
   background-color: #ff5252;
 }
-
+/**메인 페이지 CSS**/
 .alert {
   background-color: #fff3cd;
   padding: 20px;
@@ -109,6 +111,47 @@ p {
   margin: 0;
 }
 
+/*회원가입 CSS*/
+.sign-container {
+  max-width: 600px;
+  margin: 30px auto;
+}
+.sign-container label {
+  display: block;
+  margin-bottom: 15px;
+  color: #333;
+  font-weight: bold;
+}
+.sign-container input,
+.sign-container select,
+.sign-container textarea {
+  width: 100%;
+  padding: 10px;
+  border: 2px solid #ddd;
+  border-radius: 5px;
+  margin-top: 5px;
+}
+
+.sign-container input:focus,
+.sign-container select:focus,
+.sign-container textarea:focus {
+  outline-color: #ff6b6b;
+}
+
+.sign-container textarea {
+  height: 80px;
+  resize: none;
+}
+.sign-container button {
+  padding: 12px 30px;
+  margin: 0 10px;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+  
+}
+
 /* 태블릿 반응형 768px*/
 @media (max-width: 768px) {
   .container {
@@ -129,6 +172,14 @@ p {
   .nav a {
     padding: 8px 16px;
     font-size: 0.9rem;
+  }
+
+  .nav .move-link {
+    background-color: #28a745;
+  }
+
+  .nav .move-link:hover {
+    background-color: #218838;
   }
 
   .grid {

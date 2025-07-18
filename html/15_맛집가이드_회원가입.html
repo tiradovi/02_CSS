@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>🍽️맛집 가이드 - 회원가입</title>
+    <link rel="stylesheet" href="../css/14_맛집가이드_기본반응형.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>🍽️맛집 가이드 - 회원가입</h1>
+      <p>전국 최고의 맛집을 한 곳에서 소통하세요.</p>
+
+      <!-- container와 form 사이에 14맛집가이드_기본반응형에서 nav클래스를 가져와서 넣어주기 복붙 -->
+      <div class="nav">
+        <a href="14_맛집가이드_기본반응형.html" class="move-link">홈</a>
+        <a href="#양식">양식</a>
+        <a href="#한식">한식</a>
+        <a href="#일식">일식</a>
+        <a href="#중식">중식</a>
+        <a href="#디저트">디저트</a>
+        <a href="15_맛집가이드_회원가입.html" class="move-link">회원가입</a>
+      </div>
+      <form class="sign-container" action="#">
+        <label
+          >이름 :
+          <!-- 인풋 기본값:text, default:text -->
+          <input
+            type="text"
+            id="username"
+            name="username"
+            required
+            placeholder="이름을 작성하세요"
+          />
+        </label>
+        <label
+          >이메일 :
+          <input
+            type="email"
+            id="useremail"
+            name="useremail"
+            required
+            placeholder="exam@exam.com"
+          />
+        </label>
+        <label
+          >비밀번호 :
+          <input
+            type="password"
+            id="userPw1"
+            name="userPw1"
+            required
+            placeholder="비밀번호 입력"
+          />
+        </label>
+        <label
+          >비밀번호 확인:
+          <input
+            type="password"
+            id="userPw2"
+            name="userPw2"
+            required
+            placeholder="비밀번호 입력"
+          />
+        </label>
+        <label>
+          선호하는 음식 종류
+          <select name="favFood">
+            <option value="">선택하세요</option>
+            <option value="양식">양식</option>
+            <option value="한식">한식</option>
+            <option value="일식">일식</option>
+            <option value="중식">중식</option>
+            <option value="디저트">디저트</option>
+            <option value="기타">기타</option>
+          </select>
+        </label>
+
+        <label>
+          자기소개(선택사항)
+          <textarea
+            id="info"
+            name="info"
+            placeholder="맛집에 대한 관심사나 소개를 간단히 해주세요"
+          ></textarea>
+          <div class="checkbox-group">체크박스자리</div>
+          <div class="btn-group">
+            <button class="">회원가입</button>
+            <button class="">초기화</button>
+          </div>
+        </label>
+      </form>
+    </div>
+  </body>
+</html>
