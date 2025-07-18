@@ -23,7 +23,7 @@
       </div>
       <form class="sign-container" action="#">
         <label
-          >이름 :
+          >이름<span>*</span> :
           <!-- 인풋 기본값:text, default:text -->
           <input
             type="text"
@@ -34,7 +34,7 @@
           />
         </label>
         <label
-          >이메일 :
+          >이메일<span>*</span> :
           <input
             type="email"
             id="useremail"
@@ -44,7 +44,7 @@
           />
         </label>
         <label
-          >비밀번호 :
+          >비밀번호<span>*</span> :
           <input
             type="password"
             id="userPw1"
@@ -54,7 +54,7 @@
           />
         </label>
         <label
-          >비밀번호 확인:
+          >비밀번호 확인<span>*</span>:
           <input
             type="password"
             id="userPw2"
@@ -83,10 +83,29 @@
             name="info"
             placeholder="맛집에 대한 관심사나 소개를 간단히 해주세요"
           ></textarea>
-          <div class="checkbox-group">체크박스자리</div>
+          <!-- textarea는 붙여서 작성 -->
+          <div class="checkbox-group">
+            <p><strong>이용약관 동의</strong></p>
+
+            <label>
+              <input type="checkbox" name="agree1" required />
+              [필수] 서비스 이용약관에 동의합니다.
+            </label>
+
+            <label>
+              <input type="checkbox" name="agree2" required />
+              [필수] 개인정보 처리방침에 동의합니다.
+            </label>
+
+            <label>
+              <input type="checkbox" name="agree3" />
+              [선택] 마케팅 정보 수신에 동의합니다.
+            </label>
+          </div>
+
           <div class="btn-group">
-            <button class="">회원가입</button>
-            <button class="">초기화</button>
+            <button type="submit">회원가입</button>
+            <button type="reset">초기화</button>
           </div>
         </label>
       </form>
