@@ -103,6 +103,116 @@
         색상과 텍스트가 변경됩니다.
       </div>
       <div class="반응형-박스">반응형 데모 박스(데스크톱 화면)</div>
+
+      <h3>4. 1 완전한 반응형 예시</h3>
+      <div class="code-block">
+        <pre>
+/* 기본 스타일 (데스크톱) */
+.container{
+    width: 1200px;
+    margin: 0 auto;
+    padding : 20px;
+}
+
+/* 태블릿(768px 이하) */
+@media (max-width: 768px){
+    .container{
+        width: 100%;
+        padding : 15px;
+    }
+}
+/* 모바일(480px 이하) */
+@media (max-width: 480px){
+    .container{
+        padding : 10px;
+    }
+}
+        </pre>
+      </div>
+      <h2>5. 주의사항</h2>
+
+      <h3>5. 1 뷰포트 메타 태그</h3>
+      <div class="code-block">
+        <pre>
+참고로 꺽쇠 태그는 pre 내부에 존재하게 되면 
+태그형태로 실행
+< → &lt;   less then   , 작다
+> → &gt;   greater then, 크다
+& → &amp;  ampersand    , 엠퍼샌드
+" → &quot; quotation mark, 따옴표
+' → &apos; apostrophe    , 아포스트로피
+&lt; meta name="viewport" content="width=device-width, initial-scale=1.0" /&gt;
+
+        </pre>
+      </div>
+      <p>
+        모바일 기기에서 올바른 반응형 동작을 위해 반드시 HTML head에
+        포함해야합니다.
+      </p>
+      <h3>5.2 모바일 퍼스트 vs 데스크톱 퍼스트</h3>
+      <div class="예시-박스">
+        <h4>모바일 퍼스트 (권장)</h4>
+        <div class="code-block">
+          <pre>
+/* 모바일 기본 스타일 */
+.container{width: 100%;}
+
+/* 태블릿 이상 */
+@media (min-width: 768px){
+    .container{
+        width: 750px;
+    }
+}
+/* 데스크톱 이상 */
+@media (min-width: 1024px){
+    .container{
+        width:1200px;
+    }
+} 
+        </pre
+          >
+        </div>
+      </div>
+      <h3>5. 3 자주 사용하는 속성들</h3>
+      <div class="code-block">
+        <pre>
+@media(max-width:768px){
+    /*폰트 크기 조정*/
+    h1{font-size:24px;}
+
+    /*여백 조정*/
+    .container{padding:10px;}
+
+    /*너비 조정*/
+    .menu-item{width:100%;}
+    
+    /*숨기기/보이기*/
+    .desktop-only{display:none;}
+
+    /*플렉스 방향 변경*/
+    .flex-container{
+        flex-direction:column;
+    }
+}
+        </pre>
+      </div>
+      <h2>6. 실전 팁</h2>
+      <ul>
+        <li><strong>점진적 향상:</strong> 모바일로 시작해서 큰화면으로 확장</li>
+        <li><strong>터치 친화적:</strong> 버튼 크기 최소 44px 이상 유지</li>
+        <li>
+          <strong>읽기 쉬운 텍스트:</strong> 모바일에서 최소 16px 폰트 크기
+        </li>
+        <li>
+          <strong>성능 고려:</strong> 불필요한 이미지나 스타일은 해당 화면에서만
+          로드
+        </li>
+      </ul>
+    </div>
+    <div class="hightlight">
+      <strong>📱현재 화면 크기를 변경해보세요! </strong><br />
+      브라우저 개발자 도구의 반응형 모드를 사용하거나 브라우저 창 크기를
+      조정하여 실제 반응형 동작을 확인할 수 있습니다.
     </div>
   </body>
 </html>
