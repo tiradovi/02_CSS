@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>레이아웃 스타일 - Grid</title>
+    <link rel="stylesheet" href="../css/07_레이아웃스타일_grid.css" />
+  </head>
+  <body>
+    <h1>Grid - 레이아웃 스타일</h1>
+    <pre>
+        사전적 의미 : 격자, 바둑판 무늬
+        기술적 의미 : 2차원(행과 열)로 웹페이지를 격자형태로 나누어 배치하는 레이아웃
+
+        [Grid 특징]
+        행(row)과 열(column)을 동시에 제어
+        복잡한 레이아웃을 간단하게 표현
+        반응형 디자인에 최적화
+        FlexBox보다 2차원 레이아웃에 적합
+    </pre>
+
+    <h2>Grid Container</h2>
+    <pre>
+        display : grid 가 적용된 부모 요소
+    </pre>
+
+    <h2>Grid Item</h2>
+    <pre>
+        부모 요소 내부에 grid가 적용된 자식 요소
+    </pre>
+
+    <h3>기본 구조</h3>
+    <code>
+      .container { display: grid; /*그리드 컨테이너 생성*/ <br />
+      grid-template-columns: 1fr 1fr; /* 열 정의 */ <br />
+      grid-template-rows : 1fr 1fr; /* 행 정의 */ <br />
+      gap : 10px; /* 간 격 */ <br />
+      }
+    </code>
+    <hr />
+    <h3>기본 2열 그리드</h3>
+    <div class="code-example">
+      2개의 열을 균등하게 설정 grid-template-columns: 1fr 1fr;
+    </div>
+
+    <style>
+      #test1 {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+        border: 3px solid #ccc;
+      }
+      #test1 .grid-item {
+        /*
+        클래스나 아이디 명칭에 맞게 작성했는지 확인
+        */
+        border: 2px solid red;
+      }
+    </style>
+    <div class="container" id="test1">
+      <div class="grid-item">1번영역</div>
+      <div class="grid-item">2번영역</div>
+    </div>
+
+    <style>
+      #test2 {
+        display: grid;
+        grid-template-columns: 1fr 2fr 1fr;
+        gap: 10px;
+        border: 2px solid lightcoral;
+      }
+
+      #test2 .grid-item {
+        border: 1px solid red;
+      }
+    </style>
+    <h3>3열 그리드 (다른 비율)</h3>
+    <div>grid-template-columns: 1fr 2fr 1fr</div>
+    <div class="container" id="test2">
+      <div class="grid-item">1번영역</div>
+      <div class="grid-item">2번영역(크기가 다른 영역의 2배)</div>
+      <div class="grid-item">3번영역</div>
+    </div>
+
+    <h3>고정 크기와 가변 크기 조합</h3>
+    <div>
+      grid-template-columns: 200px 1fr 150px; /*고정-가변-고정*/ 고정 : 가로
+      너비에 관계없이 크기 고정 세로 너비에 관계없이 크기 고정 가변 : 기기 화면
+      너비에 따라 너비가 변화
+    </div>
+    <style>
+      #test3 {
+        display: grid;
+        grid-template-columns: 200px 1fr 150px;
+        gap: 10px;
+        border: 4px solid yellow;
+      }
+
+      #test3 .grid-item {
+        border: 1px solid yellowgreen;
+      }
+    </style>
+    <div class="container" id="test3">
+      <div class="grid-item">200px</div>
+      <div class="grid-item">가변 영역</div>
+      <div class="grid-item">150px</div>
+    </div>
+
+    <style>
+      #test4 {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 10px;
+        border: 2px solid lightblue;
+      }
+
+      #test4 .grid-item {
+        border: 1px dotted lightcoral;
+      }
+    </style>
+    <h3>반응형 그리드(화면 크기에 따라 자동 조정)</h3>
+
+    <div>grid-template-columns: repeat(auto-fit, minmax(200px, 1fr))</div>
+
+    <div class="container" id="test4">
+      <div class="grid-item">카드1</div>
+      <div class="grid-item">카드2</div>
+      <div class="grid-item">카드3</div>
+      <div class="grid-item">카드4</div>
+    </div>
+
+    <h3>(2*2) 그리드</h3>
+    <div>
+      grid-template-columns : 1fr 1fr; /* 2개의 열*/ grid-template-rows : 1fr
+      1fr; /* 2개의 행*/
+    </div>
+
+    <style>
+      #test5 {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        gap: 10px;
+        border: 2px solid orange;
+      }
+
+      #test5 .grid-item {
+        border: 2px solid blue;
+      }
+    </style>
+
+    <div class="container" id="test5">
+      <div class="grid-item">카드1</div>
+      <div class="grid-item">카드2</div>
+      <div class="grid-item">카드3</div>
+      <div class="grid-item">카드4</div>
+    </div>
+    <style>
+      #test7 {
+        display: grid;
+      }
+    </style>
+    <h3>카드 레이아웃 반응형</h3>
+    <div>
+      <div class="container" id="test7">
+        <div class="grid-item">카드1</div>
+        <div class="grid-item">카드2</div>
+        <div class="grid-item">카드3</div>
+        <div class="grid-item">카드4</div>
+        <div class="grid-item">카드5</div>
+        <div class="grid-item">카드6</div>
+        <div class="grid-item">카드7</div>
+      </div>
+    </div>
+  </body>
+</html>

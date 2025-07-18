@@ -16,11 +16,13 @@ h1 {
   color: #333;
   margin-top: 30px;
 }
+
 h2 {
-  font-size: 32px; /*16px -> 1rem, 32px -> 2rem*/
+  font-size: 32px; /* 16px -> 1rem  32px -> 2rem */
   color: #333;
   text-align: center;
 }
+
 p {
   text-align: center;
   color: #666;
@@ -56,22 +58,116 @@ p {
 
 .grid {
   /*
-  Grid : 웹페이지에서 2차원 레이아웃을 만드는 CSS 기술
-  화면 크기에 따라 자동 조절
-  grid-template-columns: 
-
-  repeat(auto-fit, minmax(300px, ifr))
-  repeat(): 컬럼을 반복해서 만들기(행 = 세로)
-  auto-fit: 화면크기에 맞춰서 자동으로 컬럼 개수 조절
-  minmax(300px, 1fr) : 각 행(컬럼)의 최소 너비는 300px
-                      남은 공간을 균등하게 나눠 가지겠다.
-                      1fr=fraction 남은 공간을 1만큼만 차지하겠다. 
+    Grid : 웹페이지에서 2차원 레이아웃을 만드는 CSS 기술
+    화면 크기에 따라 자동 조절
+    grid-template-columns
+     repeat(auto-fit, minmax(300px, 1fr))
+    repeat() : 컬럼을 반복해서 만들기 (행 = 세로)
+    auto-fit : 화면 크기에 맞춰서 자동으로 컬럼 개수 조절
+    minmax(300px, 1fr) = 각 행(컬럼)의 최소 너비는 300px
+                         남은 공간을 균등하게 나눠 가지겠다.
+                         1fr = fraction = 분수 = 작은 부분
+                              남은 공간을 1만큼만 차지하겠다.
   */
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, ifr));
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 20px;
 }
 
 .item {
-
+  background-color: white;
+  padding: 20px;
+  border: 2px solid #ddd;
+  border-radius: 10px;
 }
+
+.item:hover {
+  border-color: #ff6b6b;
+}
+
+.item h3 {
+  color: #333;
+  font-size: 1.5rem;
+  /*
+  rem = 화면 너비에서 글꼴의 상대적인 크기
+  기본값이 16px 이지만
+  컴퓨터 설정에서 기본 글자 크기를 20px으로
+  키우면 1rem 은 20px를 기본으로 사용
+  2rem 은 40px
+  px  = 절대적인 크기
+  rem   px
+  0.5 =  8
+  1   = 16
+  1.5 = 24
+  2   = 32
+  */
+}
+
+.item p {
+  text-align: left;
+  color: #666;
+  margin: 0;
+}
+
+/* 태블릿 반응형 768px*/
+@media (max-width: 768px) {
+  .container {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+  }
+
+  h1 {
+    font-size: 32px;
+  }
+
+  .nav {
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .nav a {
+    padding: 8px 16px;
+    font-size: 0.9rem;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+}
+
+/* 모바일 반응형 460px*/
+@media (max-width: 460px) {
+  body {
+    padding: 10px;
+  }
+
+  .container {
+    padding: 15px;
+    margin: 5px;
+  }
+
+  h1 {
+    font-size: 29px;
+  }
+
+  .nav {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .nav a {
+    width: 80%;
+    text-align: center;
+  }
+
+  .alert {
+    padding: 15px;
+    font-size: 0.9rem;
+  }
+}
+
+/*
+  클래스 nav 내부에 있는 a 태그 위 마우스 올라오면 배경색 ff5252 변경
+*/
