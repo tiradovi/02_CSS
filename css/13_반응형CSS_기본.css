@@ -111,6 +111,15 @@ body {
   background-color: #f8f9fa;
 }
 
+/*
+기기 너비 크기가 최소 769px 이상일 때는 
+반응형 박스 after이용해서 데스크톱 화면 글자 추가하기
+*/
+@media (min-width: 769px) {
+  .반응형-박스::after {
+    content: "(데스크톱 화면)";
+  }
+}
 /*768 이하로 가로 크기가 줄어들었을 경우 */
 @media (max-width: 768px) {
   .container {
