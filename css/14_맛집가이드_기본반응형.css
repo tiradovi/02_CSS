@@ -229,6 +229,73 @@ a {
 .sign-container button:last-child:hover {
   background-color: #5a6268;
 }
+/*********************맛집가이드 각 메뉴 상세 페이지 스타일***********************/
+.menu-detail {
+  max-width: 800px; /* 0~800px 까지 가로 너비 제한*/
+  margin: 0 auto;
+  padding: 20px;
+}
+.menu-detail .menu-img {
+  background: linear-gradient(135deg, #fff8e1 0%, #ffe0b2 100%);
+  padding: 30px;
+  border-radius: 15px;
+  border: 2px solid #ffcc02;
+  margin-bottom: 30px;
+}
+
+.menu-detail .menu-img h3 {
+  color: #d54315;
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.price {
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  margin: 25px 0;
+  border: 2px solid #ff6b6b;
+}
+.price h5 {
+  font-size: 30px;
+  color: #d32f3f;
+}
+.price p {
+  font-size: 18px;
+}
+
+.재료리스트 {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+}
+.재료아이템 {
+  background-color: #4caf50;
+  color: white;
+  padding: 8px 16px;
+  border-radius: 20px;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+}
+.order-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+.order-item {
+  background-color: white;
+  padding: 20px;
+  border: 2px solid #ddd;
+  border-radius: 10px;
+  text-align: center;
+}
+.order-item:hover {
+  border-color: #ff6b6b;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  
+}
 
 /* 태블릿 반응형 768px*/
 @media (max-width: 768px) {
