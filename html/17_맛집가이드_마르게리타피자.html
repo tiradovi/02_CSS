@@ -63,9 +63,27 @@
       </div>
     </div>
     <script>
-      const hamburger = document.querySelector(".hamburger");
+      /*
+      html 에서 맨위의 <!DOCTYPE html> 존재함 DOCumentType = 문서타입
+      document 문서에서 선택하겠다.
+      querySelector = css 선택자를 이용해서 css 명칭으로 들어간 이름을 선택
+      .hamburger : 클래스 이름이 hamburger 선택
+      #hamburger : 아이디 이름이 hamburger 선택
+      query      : 질문, 요청, 조회
+      Selector   : 선택하다.
+      addEventListener : 특정 동작이 발생했을 때 감지
+      "click", () => 클릭이 발생했을 때
+      nav.classList.toggle("show") : nav 내부 클래스 목록중에 show라는 클래스를 있으면 제거 없으면 추가
+      toggle : 있으면 제거 없으면 추가
+
+      자바스크립트 내에서 자주 사용하는 이벤트 
+      click, change, submit, show
+      */
+      const 햄버거 = document.querySelector(".hamburger");
+      // 문서내에서 클래스이름이 hamburger인 태그를 조회해서 선택후 '햄버거'라는 이름으로 저장
       const nav = document.querySelector(".nav");
-      hamburger.addEventListener("click", () => {
+
+      햄버거.addEventListener("click", () => {
         nav.classList.toggle("show");
       });
     </script>
