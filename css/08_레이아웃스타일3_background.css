@@ -26,3 +26,45 @@ p {
   border-radius: 5px;
   box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
 }
+
+.section {
+  margin-bottom: 40px;
+  padding: 20px;
+  border-radius: 10px;
+  background: #f8f9ff;
+}
+.gd-1 {
+  background: #4ecdc4
+    /*
+  0px ─────── 10px ───────── 20px
+  투명구간        연한 흰색
+  청록            구간
+  그대로 보임
+
+  똑같은 rgba(255, 255, 255, 0.1) 색상표에서 0~10px는 연한 흰색 지정이 안됨
+  10px 이상부터 연한 흰색이 보임
+
+  rgba(255, 255, 255, 0.1) 10px 부터 rgba(255, 255, 255, 0.5) 20px 연한색상을 유지
+
+  90deg                           각도 90도 = 수직 방향
+  repeating-linear-gradient       반복해서 선형 패턴 디자인 색상 만들기   
+  transparent                     기본 배경색상이 보이는 구간
+  transparent 10px                0~10px 투명 구간
+  rgba(255, 255, 255, 0.1) 10px   흰색 반투명 구간 처음에 시작할 때 반투명을 10px
+  rgba(255, 255, 255, 0.1) 20px   두번 째 오는 반투명 구간을 20px 제공
+
+  background: #4ecdc4 기본 배경색상
+  transparent ~ transparent 10px                                => 0~10px 까지 기본 색상 유지
+  rgba(255, 255, 255, 0.1) 10px ~ rgba(255, 255, 255, 0.1) 20px => 10px~20px 까지 반투명한 흰색 덮어씌우기
+  위 패턴을 반복진행
+  */
+    repeating-linear-gradient(
+      90deg,
+      transparent,
+      transparent 10px,
+      rgba(255, 255, 255, 0.1) 10px,
+      rgba(255, 255, 255, 0.1) 20px
+    );
+}
+.gd-2 {
+}

@@ -41,7 +41,7 @@
     </p>
     <pre>
         /* 기본 문법 */
-        background-image: 색상값;
+        background-image: 이미지 위치가 설정된 경로;
 
         background-image url('이미지가 들어있는 폴더 위치/이미지.이미지 확장자'); /* 이미지가 들어있는 폴더로 접속하여 이미지를 가져오거나, 이미지 주소값을 인터넷에서 가져와 작성가능*/  
         background-image : linear-gradient(각도, 색상1, 색상2) ; /*선형 그라디언트*/
@@ -71,5 +71,24 @@
     background :url('image.png') no-repeat center; /*이미지 + 옵션*/
     background :linear-gradient(각도, 색상1 #fecdc4, 색상2 #4ecdc4); /**/
     </pre>
+    <div class="section">
+      <div
+        style="
+          background: #ff6b6b linear-gradient(45deg, rgba(255, 255, 255, 0.2));
+        "
+      >
+        색상 + 그라디언트 조합
+      </div>
+      <div
+        style="
+          background: #4ecdc4
+            repeating-linear-gradient(45deg, rgba(255, 255, 255, 0.2) 10px);
+        "
+      >
+        색상 + 그라디언트 조합
+      </div>
+      <div class="gd-1">색상 + 패턴 조합</div>
+      <div class="gd-2">복잡한 다중 그라디언트 조합</div>
+    </div>
   </body>
 </html>
