@@ -30,7 +30,11 @@ p {
   color: #666;
   margin-bottom: 30px;
 }
-
+a {
+  text-decoration: none;
+  color: #333;
+  font-size: 18px;
+}
 .nav {
   display: flex;
   justify-content: center;
@@ -110,6 +114,40 @@ p {
   color: #666;
   margin: 0;
 }
+/*클래스 명칭이 item이고 item 클래스 명칭 내부에 존재하는 a태그를 모두 꾸미기*/
+.item a {
+  /* 
+  a태그는 인라인 요소이기 때문에 text-align 이 적용 어려움 
+  text-align: right;
+
+  inline-block: a 태그를 블록 요소처럼 만들어서 패딩, 마진 등이 제대로 적용되도록 함
+  float: right 요소를 오른쪽으로 띄움
+        -> inline이 아닌 block 요소처리가 됨
+
+  inline-block        -> inline-block 무시, block 요소처리가 됨 태그값 오른쪽 정렬
+  float: right
+
+  display: block;     -> float 속성 내부에 display: block이 자동으로 포함되어 있으므로 display 생략가능
+  float: right;
+
+  float: right        -> 최종형태, display : block 포함되어 있으므로 display가 없어도 됨
+  */
+
+  float: right;
+  background-color: orange;
+  padding: 8px 16px;
+  border-radius: 15px;
+}
+.item a:hover {
+  background-color: darkorange;
+}
+.item a:active {
+  background-color: lightblue;
+}
+/*
+ a 태그 위에 마우스를 올리면 : hover
+ a 태그를 마우스로 클릭하면 : active
+*/
 
 /*회원가입 CSS*/
 .sign-container {
