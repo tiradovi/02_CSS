@@ -10,7 +10,17 @@
     <div class="container">
       <h1>🍽️맛집 리스트 - 마르게리타 피자</h1>
       <p>이탈리아 정통의 맛을 그대로 재현한 클래식 피자</p>
-      <!-- 추후 네비게이션 가져와 적용하기 숙제! -->
+
+      <button class="hamburger">&#9776;</button>
+      <div class="nav">
+        <a href="14_맛집가이드_기본반응형.html" class="move-link">홈</a>
+        <a href="#양식">양식</a>
+        <a href="#한식">한식</a>
+        <a href="#일식">일식</a>
+        <a href="#중식">중식</a>
+        <a href="#디저트">디저트</a>
+        <a href="15_맛집가이드_회원가입.html" class="move-link">회원가입</a>
+      </div>
 
       <div class="menu-detail">
         <!-- 메뉴 이미지 추후 추가 -->
@@ -52,5 +62,12 @@
         </div>
       </div>
     </div>
+    <script>
+      const hamburger = document.querySelector(".hamburger");
+      const nav = document.querySelector(".nav");
+      hamburger.addEventListener("click", () => {
+        nav.classList.toggle("show");
+      });
+    </script>
   </body>
 </html>

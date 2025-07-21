@@ -35,6 +35,18 @@ a {
   color: #333;
   font-size: 18px;
 }
+
+.hamburger {
+  display: none;
+  border: none;
+  margin: 0 auto;
+  font-size: 30px;
+  cursor: pointer;
+  border-radius: 10px;
+
+  margin-bottom: 10px;
+}
+
 .nav {
   display: flex;
   justify-content: center;
@@ -54,6 +66,13 @@ a {
 .nav a:hover {
   background-color: #ff5252;
 }
+.nav .move-link {
+  background-color: #28a745;
+}
+.nav .move-link:hover {
+  background-color: #218838;
+}
+
 /**메인 페이지 CSS**/
 .alert {
   background-color: #fff3cd;
@@ -271,6 +290,7 @@ a {
   flex-wrap: wrap;
   gap: 10px;
   justify-content: center;
+  margin-bottom: 30px;
 }
 .재료아이템 {
   background-color: #4caf50;
@@ -294,7 +314,15 @@ a {
 .order-item:hover {
   border-color: #ff6b6b;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-  
+}
+.order-item strong {
+  display: block;
+  color: #333;
+  margin-bottom: 8px;
+}
+.order-item p {
+  color: #ff6b6b;
+  font-size: 1.5rem;
 }
 
 /* 태블릿 반응형 768px*/
@@ -319,14 +347,6 @@ a {
     font-size: 0.9rem;
   }
 
-  .nav .move-link {
-    background-color: #28a745;
-  }
-
-  .nav .move-link:hover {
-    background-color: #218838;
-  }
-
   .grid {
     grid-template-columns: 1fr;
     gap: 15px;
@@ -340,6 +360,9 @@ a {
     display: block;
     width: 100%;
     margin: 10px 0;
+  }
+  .order-list {
+    grid-template-columns: 1fr;
   }
 }
 
@@ -355,9 +378,15 @@ a {
   }
 
   h1 {
-    font-size: 29px;
+    font-size: 20px;
   }
-
+  /*
+네비게이션을 모바일에서 확인했을 때 토글 형태로 확인할 수 있다.
+*/
+  /* 평소에는 숨기기 display :block ->460 때 설정*/
+  .hamburger {
+    display: block;
+  }
   .nav {
     flex-direction: column;
     align-items: center;
@@ -380,6 +409,13 @@ a {
 
   .sign-container button {
     padding: 15px;
+  }
+  .재료리스트 {
+    gap: 8px;
+  }
+  .재료아이템 {
+    padding: 6px 12px;
+    font-size: 10px;
   }
 }
 
