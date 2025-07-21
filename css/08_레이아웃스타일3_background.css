@@ -1,0 +1,28 @@
+body {
+  max-width: 900px; /*0~900px 까지 의 범위 설정*/
+  margin: 0 auto; /*상하 = 0 좌우 = 자동 여백 설정*/
+  padding: 20px;
+  background-color: #f8f8fa;
+}
+
+h1 {
+  color: #333; /*맨 아래 color 속성으로 흰색을 작성했기 때문에 작동X*/
+  text-align: center;
+  padding: 20px;
+  background: linear-gradient(45deg, #667eea, #764ba2);
+  color: #fff;
+}
+
+pre {
+  background: #2d3748;
+  color: #e2e8f0;
+  padding: 15px;
+  border-radius: 8px;
+  font-size: 14px;
+}
+p {
+  background-color: white;
+  padding: 15px;
+  border-radius: 5px;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+}

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>배경 색상 개요</title>
+    <link rel="stylesheet" href="../css/08_레이아웃스타일3_background.css" />
+  </head>
+  <body>
+    <h1>Background 속성들 완벽 비교</h1>
+    <pre>
+    핵심 차이점
+    background-color : 단색만 가능
+    background-image : 이미지, 그라디언트 등 복잡한 배경 가능
+    background       : 모든 배경 속성을 한번에 설정하는 통합 속성
+                       단색 가능, 이미지 가능, 그라디언트 조합 가능
+</pre
+    >
+
+    <h2>background-color (배경색)</h2>
+    <p><strong>용도 :</strong>단순한 단색 배경을 설정할 때 사용</p>
+    <pre>
+        /* 기본 문법 */
+
+        background-color: 색상값;
+        background-color #ff6b6b;       /* 16진수로 표현하는 색상표     */
+        background-color red;           /* 색상 명칭으로 표현하는 색상표 */
+        background-color rgb(255,0,0);  /* rgb, rgba로 표현하는 색상표  */
+    </pre>
+
+    <div class="section">
+      <div style="background-color: #ff6b6b">단색 빨간 배경</div>
+      <div style="background-color: #4ecdc4">단색 초록 배경</div>
+      <div style="background-color: #45b7d1">단색 파란 배경</div>
+    </div>
+
+    <h2>background-image (배경이미지, 그라디언트)</h2>
+    <p>
+      <strong>용도 :</strong>이미지, 그라디언트, 패턴 등 복잡한 배경을 설정할 때
+      사용
+    </p>
+    <pre>
+        /* 기본 문법 */
+        background-image: 색상값;
+
+        background-image url('이미지가 들어있는 폴더 위치/이미지.이미지 확장자'); /* 이미지가 들어있는 폴더로 접속하여 이미지를 가져오거나, 이미지 주소값을 인터넷에서 가져와 작성가능*/  
+        background-image : linear-gradient(각도, 색상1, 색상2) ; /*선형 그라디언트*/
+        background-image : radial-gradient(각도, 색상1, 색상2) ; /*원형 그라디언트*/
+    </pre>
+    <div class="section">
+      <div style="background: linear-gradient(45deg, #667eea, #764ba2)">
+        선형 그라디언트
+      </div>
+      <div style="background: radial-gradient(circle, #667eea, #764ba2)">
+        원형 그라디언트
+      </div>
+    </div>
+
+    <h2>background (통합 속성)</h2>
+    <p>
+      <strong>용도 :</strong> 여러 배경 속성을 한번에 설정할 때 사용(color +
+      image + position + repeat 등)
+    </p>
+    <pre>
+    /* 기본 문법 */
+    background : [color][image][repeat][position][size];
+    <small>color 나 image 둘 중하나는 필수 나머지는 선택</small>
+    
+    /* 예제 */
+    background :#ff6b6b; /*단색만*/
+    background :url('image.png') no-repeat center; /*이미지 + 옵션*/
+    background :linear-gradient(각도, 색상1 #fecdc4, 색상2 #4ecdc4); /**/
+    </pre>
+  </body>
+</html>
