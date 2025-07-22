@@ -1,0 +1,118 @@
+form {
+  max-width: 1000px; /*최대 너비*/
+  margin: 30px auto;
+  padding: 20px;
+}
+fieldset {
+  border: 2px solid #ff6b6b; /*선 굵기 선종류 선색상*/
+  border-radius: 10px;
+  margin-bottom: 20px;
+  padding: 20px;
+  background-color: #fff8f8;
+}
+
+fieldset legend {
+  color: #ff6b6b;
+  font-size: 1.2rem;
+  padding: 0 10px;
+  background-color: white;
+  border-radius: 10px;
+  border: 2px solid #ff6b6b;
+}
+form > .input-field > label {
+  display: block;
+  margin-bottom: 15px;
+  color: #333;
+  cursor: pointer;
+}
+/*form > fieldset > label > input 
+    개발자가 지정한 범위에서 선택해야하는 input
+    소비자가 자유롭게 값을 개발자에게 전달하는 input
+    5순위 태그 명칭으로만 디자인 속성을 사용해서 디자인적으로 충돌
+
+form > .input-field > label > input
+    */
+
+form > .input-field > label > input {
+  width: 70%;
+  border: 2px solid #ddd;
+  border-radius: 5px;
+}
+/*input 태그 작성중일때*/
+form > .input-field > label > input:focus {
+  /*
+    focus의 경우 초반에 input 태그에 작성한
+    실선 두께를 유지한 상태로 색상만 변경
+    border 대신 border-color를 이용하거나
+    outline 대신 outline-color를 이용
+    border-color 
+    outline-color
+  */
+  outline-color: #ff6b6b;
+}
+
+form > .choice-field {
+  text-align: center;
+}
+form > .choice-field > label {
+  display: inline-block;
+  margin: 10px 15px;
+  padding: 10px 20px;
+  background-color: white;
+  border: 2px solid #ddd;
+  border-radius: 20px;
+  cursor: pointer;
+}
+form > .choice-field > label:active {
+  background-color: #fff8f8;
+  border-color: #ff6b6b;
+}
+form > .choice-field > label > input {
+  /*
+    accent-color는 체크된 체크박스 내부색상을 변경
+    체크된 체크표시의 색상변경
+    */
+  accent-color: #ff6b6b;
+}
+form > .choice-field > label > input:checked {
+  /*
+    filter: invert(1);
+
+    기존 input에서 주었던 accent 색상이나 이외 모든 색상을 반전형태로 제공
+    light->dark 
+    색약모드
+    */
+}
+
+img {
+  /*
+    %는 디바이스 기기 크기에 맞춰 크기 변경
+    px는 절대 크기 
+    */
+  width: 200px;
+  display: block;
+  margin: 15px auto;
+  border-radius: 5px;
+  max-width: 70%;
+}
+iframe {
+  display: block;
+  margin: 20px auto;
+  border-radius: 10px;
+  max-width: 70%;
+}
+form button {
+  padding: 12px 24px;
+  margin: 10px 5px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+form button:nth-child(odd) {
+  background-color: orange;
+}
+form button:nth-child(even) {
+  background-color: yellowgreen;
+}
+
+/*child (odd)(even)*/

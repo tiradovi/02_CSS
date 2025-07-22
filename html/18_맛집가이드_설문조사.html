@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>맛집 가이드 - 설문조사</title>
     <link rel="stylesheet" href="../css/14_맛집가이드_기본반응형.css" />
-    <link rel="stylesheet" href="../css/18_맛집가이드_설문조사.css">
+    <link rel="stylesheet" href="../css/18_맛집가이드_설문조사.css" />
   </head>
   <body>
     <div class="container">
@@ -24,7 +24,7 @@
       <!-- action 내부에 작성된 값을 결과로 전달, 전달할 html없으면 # -->
       <form action="#">
         <!-- 기본정보 -->
-        <fieldset>
+        <fieldset class="input-field">
           <legend>기본 정보</legend>
           <label>
             이름 :
@@ -70,7 +70,7 @@
             />
           </label>
         </fieldset>
-        <fieldset>
+        <fieldset class="choice-field">
           <legend>음식 선호도</legend>
 
           <p>좋아하는 음식 종류(복수 선택 가능)</p>
@@ -103,13 +103,9 @@
         </fieldset>
         <!-- 맛집 이미지 -->
         <!--html 코드 작성시 어디서부터 어디까지 어떤 코드를 작성했는지 표기-->
-        <fieldset>
+        <fieldset class="choice-field">
           <legend>맛집 사진 1탄</legend>
-          <img
-            style="width: 200px"
-            src="../images/pizza/감자피자.png"
-            alt="감자피자"
-          />
+          <img src="../images/pizza/감자피자.png" alt="감자피자" />
           <!-- alt 시각적으로 안보일 때 알려주는 설명, 이미지가 안보일 때 어떤 이미지의 위치인지 알려준다-->
           <p>위 음식이 맛있어 보이나요?</p>
           <label>
@@ -121,7 +117,7 @@
             맛없어보입니다.
           </label>
         </fieldset>
-        <fieldset>
+        <fieldset class="choice-field">
           <legend>맛집 사진 2탄</legend>
           <img
             style="width: 200px"
@@ -139,7 +135,7 @@
           </label>
         </fieldset>
         <!-- 유튜브 영상 -->
-        <fieldset>
+        <fieldset class="choice-field">
           <legend>맛집 소개 영상</legend>
           <p>유명한 맛집 리뷰 영상을 시청해보세요</p>
           <iframe
@@ -161,7 +157,7 @@
             👎도움안됨👎
           </label>
         </fieldset>
-        <fieldset>
+        <fieldset class="choice-field">
           <legend>맛집 위치</legend>
           <p>서울 맛집 밀집 지역 - 종각역 주변</p>
           <iframe
