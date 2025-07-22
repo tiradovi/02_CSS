@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>맛집 가이드 - 설문조사</title>
+    <link rel="stylesheet" href="../css/14_맛집가이드_기본반응형.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>맛집 가이드 - 설문조사</h1>
+
+      <button class="hamburger">&#9776;</button>
+      <div class="nav">
+        <a href="14_맛집가이드_기본반응형.html" class="move-link">홈</a>
+        <a href="#양식">양식</a>
+        <a href="#한식">한식</a>
+        <a href="#일식">일식</a>
+        <a href="#중식">중식</a>
+        <a href="#디저트">디저트</a>
+        <a href="15_맛집가이드_회원가입.html" class="move-link">회원가입</a>
+      </div>
+      <!-- action 내부에 작성된 값을 결과로 전달, 전달할 html없으면 # -->
+      <form action="#">
+        <!-- 기본정보 -->
+        <fieldset>
+          <legend>기본 정보</legend>
+          <label>
+            이름 :
+            <!-- 
+          class = css 스타일을 꾸며줄 때 사용하는 명칭
+          id    = 자바스크립트 기능 연결할 때 사용  
+          name  = 소비자가 작성한 값을 action으로 전달할 html 내부에
+                 전달할 때 사용하는 명칭
+          required = 필수항목
+          readonly = 읽기전용 -> ex) 계정연동 회원가입 
+          -->
+            <input id="username" name="username" required />
+          </label>
+          <label>
+            이메일 :
+            <input type="email" id="useremail" name="useremail" required />
+          </label>
+          <label>
+            나이 :
+            <input
+              type="range"
+              id="userage"
+              name="userage"
+              min="10"
+              max="100"
+              value="25"
+            />
+          </label>
+          <label>
+            <!-- input 기본타입 text, type으로 
+           number, range로 작성시 min(최소), max(최대), value(기본) 작성 가능
+           placeholder = input 내부에 어떠한 값을 작성해야하는 지 알려주는 알림값
+
+           input은 소비자가 작성한 value 값을 가져오기 때문에 value작성 X
+           checkbox,radio의 경우는 작성 필요
+            -->
+            전화번호 :
+            <input
+              id="userphone"
+              name="userphone"
+              placeholder="010- 형식으로 전화번호 입력"
+            />
+          </label>
+        </fieldset>
+        <fieldset>
+          <legend>음식 선호도</legend>
+          <p>좋아하는 음식 종류(복수 선택 가능: )</p>
+          <label>
+            <input type="checkbox" id="korean" name="food" value="food" />
+            한식
+          </label>
+        </fieldset>
+      </form>
+    </div>
+  </body>
+</html>
